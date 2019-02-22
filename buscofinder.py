@@ -22,6 +22,7 @@ for file in os.scandir("/mnt/lustre/macmaneslab/nah1004/transcriptomes/reports")
 					wanted_item = wanted_item.replace("]","")
 					scores_list = wanted_item.split(",")
 					scores_dict = {}
+#obtain only items from list that will be necessary for pertaining score and its name
 					for scores in scores_list:
 						element = scores.split(":")
 						ID = element[0]
@@ -46,5 +47,4 @@ try:
 		in_handle.write(fin_string)
 except IOError as err:
 	print ( err )
-
 
